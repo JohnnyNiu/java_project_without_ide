@@ -1,0 +1,16 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+sourceSets {
+	main {
+		java {
+			srcDirs 'gradleSrc'
+		}
+	}
+}
+
+sourceSets.main.output.classesDir = file("gradleOut")
+
+mainClassName='Main'
+
+defaultTasks 'compileJava', 'run'
